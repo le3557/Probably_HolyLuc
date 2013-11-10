@@ -39,12 +39,12 @@ ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
   { "Cleanse", "@coreHealing.needsDispelled('Aqua Bomb')" },
 
   -- regular healing
+  { "Holy Shock", "lowest.health < 100"},
   { "Flash of Light", "lowest.health < 20" },
   { "Divine Light", "lowest.health < 60"},
-  { "Holy Shock", "lowest.health < 100"},
-  { "Light Of Dawn", "@coreHealing.needsHealing(90, 4)", "player.holypower = 3" },
+  { "Light Of Dawn", { "@coreHealing.needsHealing(90, 4)", "player.holypower = 3" }},
   { "Holy Radiance", "@coreHealing.needsHealing(85, 4)", "lowest" },
-  { "World Of Glory", "lowest.health < 90", "player.holypower = 1" },
+  { "World Of Glory", "player.holypower = 1", "lowest.health < 90" },
   { "Holy Light", "lowest.health < 80" },
 
   -- T6 Tallents
