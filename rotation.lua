@@ -23,13 +23,17 @@ ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
 
   -- tank
   { "Beacon Of Light", "!tank.buff(Beacon Of Light)" },
-  { "Sacred Shield", { "!tank.buff(Sacred shield)", "tank.health < 50" } },
-
+  
   -- Interrupts
   { "Rebuke", "modifier.interrupts" },
 
   -- mana regen
   { "Divine Plea", "player.mana < 80" },
+
+  -- T6 Tallents
+  { "Holy Prism", "lowest.health < 85"  },
+  { "Light's Hammer" , "modifier.lcontrol", "ground" },
+  { "Execution Sentence", "lowest.health < 85"  },
 
   -- CDs
   { "Divine Favor" , "modifier.lshift" },
@@ -39,17 +43,13 @@ ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
   { "Cleanse", "@coreHealing.needsDispelled('Aqua Bomb')" },
 
   -- regular healing
-  { "Holy Shock", "lowest.health < 100"},
+  { "Holy Shock", "lowest.health < 100" },
   { "Flash of Light", "lowest.health < 20" },
-  { "Divine Light", "lowest.health < 60"},
+  { "Sacred Shield", "lowest.health < 50" },
+  { "Divine Light", "lowest.health < 60" },
   { "Light Of Dawn", { "@coreHealing.needsHealing(90, 4)", "player.holypower >= 3" } },
   { "Holy Radiance", "@coreHealing.needsHealing(85, 4)", "lowest" },
-  { "World Of Glory", "player.holypower >= 1", "lowest.health < 90" },
+  { "World Of Glory", {"player.holypower > 0", "player.holypower < 3" }, "lowest.health < 90" },
   { "Holy Light", "lowest.health < 80" },
-
-  -- T6 Tallents
-  { "Holy Prism", "lowest.health < 85"  },
-  { "Light's Hammer" , "modifier.lcontrol", "ground" },
-  { "Execution Sentence", "lowest.health < 85"  },
 
 })
