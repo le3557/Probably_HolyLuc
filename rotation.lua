@@ -38,7 +38,7 @@ ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
   -- CDs
   { "Divine Favor" , "modifier.lshift" },
   { "Avenging Wrath" , "modifier.lalt" },
-  { "Guardian King" , "modifier.rshift" },
+  { "Guardian of Ancient King" , "modifier.rshift" },
 
   -- Dispell
   { "Cleanse", "@coreHealing.needsDispelled('Aqua Bomb')" },
@@ -46,7 +46,7 @@ ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
   -- regular healing
   { "Lay on Hands", "lowest.health < 20" },
   { "Holy Shock", "lowest.health < 100" },
-  { "Flash of Light", "lowest.health < 50" },
+  { "Flash of Light", "lowest.health < 40" },
   { "Sacred Shield", { "!lowest.buff", "lowest.health < 50" }},
   { "Divine Light", "lowest.health < 70" },
   { "Light Of Dawn", { "@coreHealing.needsHealing(90, 4)", "player.holypower >= 3" }, "lowest" },
