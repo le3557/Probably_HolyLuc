@@ -23,7 +23,7 @@ ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
 
   -- tank
   { "Beacon Of Light", "!tank.buff(Beacon Of Light)" },
-  { "Sacred Shield", "!tank.buff(Sacred shield)", "tank.health < 50" },
+  { "Sacred Shield", { "!tank.buff(Sacred shield)", "tank.health < 50" } },
 
   -- Interrupts
   { "Rebuke", "modifier.interrupts" },
@@ -42,9 +42,9 @@ ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
   { "Holy Shock", "lowest.health < 100"},
   { "Flash of Light", "lowest.health < 20" },
   { "Divine Light", "lowest.health < 60"},
-  { "Light Of Dawn", { "@coreHealing.needsHealing(90, 4)", "player.holypower = 3" }},
+  { "Light Of Dawn", { "@coreHealing.needsHealing(90, 4)", "player.holypower >= 3" } },
   { "Holy Radiance", "@coreHealing.needsHealing(85, 4)", "lowest" },
-  { "World Of Glory", "player.holypower = 1", "lowest.health < 90" },
+  { "World Of Glory", "player.holypower >= 1", "lowest.health < 90" },
   { "Holy Light", "lowest.health < 80" },
 
   -- T6 Tallents
