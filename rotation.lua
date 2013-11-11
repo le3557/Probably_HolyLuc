@@ -22,7 +22,7 @@ ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
   { "Seal of Truth", "player.seal != 3" },
 
   -- tank
-  { "Beacon Of Light", "!tank.buff(Beacon Of Light)" },
+  { "Beacon Of Light", "!tank.buff" },
   
   -- Interrupts
   { "Rebuke", "modifier.interrupts" },
