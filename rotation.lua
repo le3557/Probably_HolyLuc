@@ -46,11 +46,11 @@ ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
   -- regular healing
   { "Lay on Hands", "lowest.health < 20" },
   { "Holy Shock", "lowest.health < 100" },
+  { "Light Of Dawn", { "@coreHealing.needsHealing(90, 4)", "player.holypower >= 3" }, "lowest" },
   { "Flash of Light", "lowest.health < 40" },
   { "Sacred Shield", { "!lowest.buff", "lowest.health < 50" }},
-  { "Divine Light", "lowest.health < 70" },
-  { "Light Of Dawn", { "@coreHealing.needsHealing(90, 4)", "player.holypower >= 3" }, "lowest" },
   { "Word Of Glory", "player.holypower >= 1", "lowest.health < 70" },
+  { "Divine Light", "lowest.health < 70" },
   { "Holy Radiance", "@coreHealing.needsHealing(80, 4)", "lowest" },
   { "Holy Light", "lowest.health < 90" },
 
