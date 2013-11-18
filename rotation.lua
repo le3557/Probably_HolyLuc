@@ -18,40 +18,40 @@ ProbablyEngine.library.register('coreHealing', {
 ProbablyEngine.rotation.register_custom(65, "HolyLuc", {
 
   -- buffs
-  { "Blessing of Might", "!player.buff(Blessing of Might)" },
-  { "Seal of Truth", "player.seal != 3" },
+  { "19740", "!player.buff(19740)" }, --Blessing of Migth
+  { "31801", "player.seal != 3" }, --Seal of Truth
 
   -- tank
-  { "Beacon Of Light", "!tank.buff" },
+  { "53563", "!tank.buff(53563)" }, --Beacon Of Light
   
   -- Interrupts
-  { "Rebuke", "modifier.interrupts" },
+  { "96231", "modifier.interrupts" }, --Rebuke
 
   -- mana regen
-  { "Divine Plea", "player.mana < 80" },
+  { "54428", "player.mana < 80" }, --Divine Plea
 
   -- T6 Tallents
-  { "Holy Prism", "lowest.health < 85"  },
-  { "Light's Hammer" , "modifier.lcontrol", "ground" },
-  { "Execution Sentence", "lowest.health < 85"  },
+  { "114165", "lowest.health < 85"  }, --Holy Prism
+  { "114158" , "modifier.lcontrol", "ground" }, --Light's Hammer
+  { "114157", "lowest.health < 85"  }, --Execution Sentence
 
   -- CDs
-  { "Divine Favor" , "modifier.lshift" },
-  { "Avenging Wrath" , "modifier.lalt" },
-  { "Guardian of Ancient King" , "modifier.rshift" },
+  { "31842" , "modifier.lshift" }, --Divine Favor
+  { "31884" , "modifier.lalt" }, --Avenging Wrath
+  { "86669" , "modifier.rshift" }, --Guardian of Ancient King
 
   -- Dispell
-  { "Cleanse", "@coreHealing.needsDispelled('Aqua Bomb')" },
+  { "4987", "@coreHealing.needsDispelled('Aqua Bomb')" }, --Cleanse
 
   -- regular healing
-  { "Lay on Hands", "lowest.health < 20" },
-  { "Holy Shock", "lowest.health < 100" },
-  { "Light Of Dawn", { "@coreHealing.needsHealing(90, 4)", "player.holypower >= 3" }, "lowest" },
-  { "Flash of Light", "lowest.health < 40" },
-  { "Sacred Shield", { "!lowest.buff", "lowest.health < 50" }},
-  { "Word Of Glory", "player.holypower >= 1", "lowest.health < 70" },
-  { "Divine Light", "lowest.health < 70" },
-  { "Holy Radiance", "@coreHealing.needsHealing(80, 4)", "lowest" },
-  { "Holy Light", "lowest.health < 90" },
+  { "633", "lowest.health < 20" }, --Lay on Hands
+  { "20473", "lowest.health < 100" }, --Holy Shock
+  { "85222", { "@coreHealing.needsHealing(90, 4)", "player.holypower >= 3" }, "lowest" }, --Light Of Dawn
+  { "19750", "lowest.health < 40" }, --Flash of Light
+  { "20925", { "!lowest.buff", "lowest.health < 50" }}, --Sacred Shield
+  { "85673", "player.holypower >= 1", "lowest.health < 70" }, --Word Of Glory
+  { "82326", "lowest.health < 60" }, --Divine Light
+  { "82327", "@coreHealing.needsHealing(80, 4)", "lowest" }, --Holy Radiance
+  { "635", "lowest.health < 90" }, --Holy Light
 
 })
